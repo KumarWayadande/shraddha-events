@@ -1,7 +1,6 @@
 // import homeImage from "/images/home-page-1.jpg";
 import Image from "next/image";
 import { Miniver } from "next/font/google";
-import Carousel from "./components/Carousel";
 
 const miniver = Miniver({
   // subsets: ['latin'],
@@ -14,8 +13,12 @@ export default function Home() {
     <div>
       <div className="navbar w-screen flex flex-row">
         <div className="navbar-items-container w-1/2 flex flex-row justify-between items-center mx-auto my-10">
-          <p className="uppercase text-stone-400 hover:text-stone-700 cursor-pointer transition-all">Home</p>
-          <p className="uppercase text-stone-400 hover:text-stone-700 cursor-pointer transition-all">Services</p>
+          <p className="uppercase text-stone-400 hover:text-stone-700 cursor-pointer transition-all">
+            Home
+          </p>
+          <p className="uppercase text-stone-400 hover:text-stone-700 cursor-pointer transition-all">
+            Services
+          </p>
           <Image
             // src="/images/canva-logo/logo.jpg"
             src="/images/canva-logo/logo-resized.jpg"
@@ -25,17 +28,14 @@ export default function Home() {
             alt="logo_of_company"
             className=""
           />
-          <p className="uppercase text-stone-400 hover:text-stone-700 cursor-pointer transition-all">About Us</p>
-          <p className="uppercase text-stone-400 hover:text-stone-700 cursor-pointer transition-all">Contact</p>
+          <p className="uppercase text-stone-400 hover:text-stone-700 cursor-pointer transition-all">
+            About Us
+          </p>
+          <p className="uppercase text-stone-400 hover:text-stone-700 cursor-pointer transition-all">
+            Contact
+          </p>
         </div>
       </div>
-
-
-      <div className="home-page-carousel">        
-        <Carousel />
-      </div>
-
-
     </div>
   );
 }
