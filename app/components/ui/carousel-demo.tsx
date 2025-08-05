@@ -6,7 +6,7 @@ export function CarouselDemo() {
     {
       title: "Birthday Celebration",
       button: "Know More",
-      src: "images/event-photos/event-19.jpg",
+      src: "/images/event-photos/event-19.jpg",
     },
     {
       title: "Baby Shower",

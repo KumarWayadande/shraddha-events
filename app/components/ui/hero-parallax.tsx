@@ -103,7 +103,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="flex flex-col items-center justify-center relative mx-auto px-4 w-full py-20 top-0 left-0">
+    <div className="flex flex-col items-center justify-center relative mx-auto px-4 w-full -mt-12 md:py-20 top-0 left-0">
       <h1
         className={`text-6xl mb-5 sm:text-6xl md:text-7xl text-center font-extralight`}
       >
@@ -146,7 +146,14 @@ export const ProductCard = ({
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          className="hidden md:block object-cover object-left-top absolute h-full w-full inset-0"
+          alt={product.title}
+        />
+        <Image
+          src={product.thumbnail}
+          height="400"
+          width="400"
+          className="md:hidden object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
       </p>

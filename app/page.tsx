@@ -25,7 +25,7 @@ export default function Home() {
         <HeroParallaxDemo />
       </div>
 
-      <div className="third-section md:py-20 w-full">
+      <div className="third-section px-10 md:px-0 md:py-20 w-full">
         <div className="heading-container flex flex-col justify-center items-center gap-4">
           <p className="text-amber-800 text-sm md:text-lg tracking-widest uppercase">
             Our flagship packages just for you
