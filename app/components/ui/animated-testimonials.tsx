@@ -2,9 +2,9 @@
 
 import { TfiQuoteRight } from "react-icons/tfi";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 type Testimonial = {
   quote: string;
@@ -21,28 +21,28 @@ export const AnimatedTestimonials = ({
 }) => {
   const [active, setActive] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setActive((prev) => (prev + 1) % testimonials.length);
-  };
+  }, []);
 
   const handlePrev = () => {
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const isActive = (index: number) => {
-    return index === active;
-  };
+  // const isActive = (index: number) => {
+  //   return index === active;
+  // };
 
   useEffect(() => {
     if (autoplay) {
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, handleNext]);
 
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
-  };
+  // const randomRotateY = () => {
+  //   return Math.floor(Math.random() * 21) - 10;
+  // };
   return (
     <div className="mx-auto w-full py-20">
       <div className="flex flex-col w-[90%] sm:w-[70%] md:w-[50%] mx-auto  items-center justify-center py-4 text-center">
