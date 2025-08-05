@@ -1,13 +1,6 @@
 "use client";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { Italianno } from "next/font/google";
-
-const italianno = Italianno({
-  style: "normal",
-  weight: "400",
-});
-
 import {
   motion,
   useScroll,
